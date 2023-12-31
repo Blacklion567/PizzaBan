@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Pizza Ban</title>
+  <link rel="stylesheet" href="./Style/style.css" />
+
+  <script type="text/javascript" src="./js/pizzas.js" defer></script>
+  <script type="text/javascript" src="./js/script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="models">
+    <div class="pizza-item">
+      <a href="">
+        <div class="pizza-item--img"><img src="" /></div>
+        <div class="pizza-item--add">+</div>
+      </a>
+      <div class="pizza-item--price"></div>
+      <div class="pizza-item--name">--</div>
+      <div class="pizza-item--desc">--</div>
+    </div>
+    <div class="cart--item">
+      <img src="" />
+      <div class="cart--item-nome">--</div>
+      <div class="cart--item--qtarea">
+        <button class="cart--item-qtmenos">-</button>
+        <div class="cart--item--qt">1</div>
+        <button class="cart--item-qtmais">+</button>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div class="menu-openner"><span>0</span>🛒</div>
+  </header>
+  <main>
+    <a href="./final.html" class="homeButton">Home</a>
+    <div class="pizza-area"></div>
+  </main>
+  <aside>
+    <div class="cart--area">
+      <div class="menu-closer">❌</div>
+      <h2>Your Pizzas</h2>
+      <div class="cart"></div>
+      <div class="cart--details">
+        <div class="cart--totalitem subtotal">
+          <span>Subtotal</span>
+          <span>₱ --</span>
+        </div>
+        <div class="cart--totalitem desconto">
+          <span>Discount (-10%)</span>
+          <span>₱ --</span>
+        </div>
+        <div class="cart--totalitem total big">
+          <span>Total</span>
+          <span>₱ --</span>
+        </div>
+        <button type="button" onclick="displayValues()" class="cart--finalizar">
+          Deliver
+        </button>
+        <form id="myForm" class="myInformation">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+
+          <label for="number">Number:</label>
+          <input type="number" id="number" name="number" required>
+
+        </form>
+
+        <div id="result-container"></div>
+        <div class="listInfo">
+          <ul>
+            <li><a href="./final.html">Home</a></li>
+            <li><a href="./menu.html">Menu</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+  <div class="pizzaWindowArea">
+    <div class="pizzaWindowBody">
+      <div class="pizzaInfo--cancelMobileButton">Voltar</div>
+      <div class="pizzaBig">
+        <img src="" />
+      </div>
+      <div class="pizzaInfo">
+        <h1>--</h1>
+        <div class="pizzaInfo--desc">--</div>
+        <div class="pizzaInfo--sizearea">
+          <div class="pizzaInfo--sector">Size</div>
+          <div class="pizzaInfo--sizes">
+            <div data-key="0" class="pizzaInfo--size">
+              SMALL <span>--</span>
+            </div>
+            <div data-key="1" class="pizzaInfo--size">
+              AVERAGE <span>--</span>
+            </div>
+            <div data-key="2" class="pizzaInfo--size selected">
+              BIG <span>--</span>
+            </div>
+          </div>
+        </div>
+        <div class="pizzaInfo--pricearea">
+          <div class="pizzaInfo--sector">Price</div>
+          <div class="pizzaInfo--price">
+            <div class="pizzaInfo--actualPrice">₱ --</div>
+            <div class="pizzaInfo--qtarea">
+              <button class="pizzaInfo--qtmenos">-</button>
+              <div class="pizzaInfo--qt">1</div>
+              <button class="pizzaInfo--qtmais">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="pizzaInfo--addButton">Add to Cart</div>
+        <div class="pizzaInfo--cancelButton">Cancel</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=".">
+  <link rel="shortcut icon"
+    href="../Build-and-Deploy-a-Pizza-Website-Using-only-HTML-CSS-and-JavaScript-2023-Dark-and-Light//final//img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel=" stylesheet" href="./Style/menu.css">
+  <script src="./js/menu.js" defer></script>
+
+  <title>Pizza Ban Menu</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#header" class="nav__logo">
+        <img src="./images/favicon.png" alt="logo image">
+        PizzaBan
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="./final.html" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="./menu.html" class="nav__link">Menu</a></li>
+          <li class="nav__item"><a href="./pizza.html" class="nav__link">Order</a></li>
+          <li class="nav__item"><a href="./about.html" class="nav__link">About us</a></li>
+          <li class="nav__item"><a href="#contactUs" class="nav__link">Contact us</a></li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class="fa-soli d fa-xmark"></i>
+        </div>
+
+        <img src="./images/pizza-slice.png" alt="nav image" class="nav__img-1">
+      </div>
+
+      <div class="nav__buttons">
+        <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div id="sidebar">
+    <button onclick="closeSidebar()">Close</button>
+    <h2 class="sideOrder">Side Orders</h2>
+    <ul id="sideOrderList">
+
+    </ul>
+    <div class="price-container">
+      <h1 id="price-pay"></h1>
+    </div>
+  </div>
+
+
+  <main>
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage right--animation" src="./img/Pizza-Image-Remove/California_Pizza-removebg-preview.png"
+            alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>California Pizza</h1>
+
+            <p class="popular-paragraph">
+              California Pizza Kitchen is an American casual dining restaurant chain that specializes in
+              California-style pizza. The
+              restaurant was started in 1985 by attorneys Rick Rosenfield and Larry Flax in Beverly Hills, California,
+              United States.
+              California Pizza Kitchen introduced and popularized BBQ Chicken Pizza.
+
+            </p>
+
+            <button onclick="addSideOrderItem('California Pizza', '₱142.98')">₱142.98</button>
+            <button id="btn" onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class=" section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage left--animation " src="./img/Pizza-Image-Remove/chicago-removebg-preview.png"
+            alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Chicago-style pizza</h1>
+
+            <p class="popular-paragraph">
+              Chicago-style pizza is pizza prepared according to several styles developed in Chicago. It can refer
+              to both the
+              well-known deep-dish or stuffed pizzas and the lesser-known thin-crust tavern-style pizzas more
+              popular with locals.
+
+            </p>
+            <button onclick="addSideOrderItem('Chicago-style pizza', '₱122.98')">₱122.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="section_container ">
+        <div class="popular show-scroll">
+          <img class="pizzaImage right--animation"
+            src="./img/Pizza-Image-Remove/detroit-style-double-pepperoni-removebg-preview.png" alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Detroit-style pizza</h1>
+            <p class="popular-paragraph">
+              Detroit-style pizza is a rectangular pan pizza with a thick, crisp, chewy crust. It is traditionally
+              topped to the edges
+              with mozzarella and/or Wisconsin brick cheese, which caramelizes against the high-sided heavyweight
+              rectangular pan.
+
+
+            </p>
+            <button onclick="addSideOrderItem('Detroit-style pizza', '₱119.98')">₱119.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage left--animation " src="./img/Pizza-Image-Remove/hawaiian-pizza-removebg-preview.png"
+            alt="Image Error"></img>
+          <div class="popular_description">
+            <h1>Hawaiian pizza</h1>
+            <p class="popular-paragraph">
+              Hawaiian pizza is a pizza originating in Canada, traditionally topped with pineapple, tomato sauce,
+              cheese, and either
+              ham or bacon.
+
+            </p>
+            <button onclick="addSideOrderItem('Hawaiian pizza', '₱112.98')">₱112.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage right--animation"
+            src="./img/Pizza-Image-Remove/neapolitan-margherita-pizza--removebg-preview.png" alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Neapolitan pizza</h1>
+            <p class="popular-paragraph">
+              Neapolitan pizza, also known as Naples-style pizza, is a style of pizza made with tomatoes and mozzarella
+              cheese. The
+              tomatoes must be either San Marzano tomatoes or Pomodorino del Piennolo del Vesuvio, which grow on the
+              volcanic plains
+              to the south of Mount Vesuvius
+            </p>
+            <button onclick="addSideOrderItem('Neapolitan pizza', '₱100.99')">₱100.99</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage left--animation "
+            src="./img/Pizza-Image-Remove/new-york-style-pizza--removebg-preview.png" alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>New York-style pizza</h1>
+            <p class="popular-paragraph">
+              New York–style pizza is pizza made with a characteristically large hand-tossed thin crust, often sold in
+              wide slices to
+              go. The crust is thick and crisp only along its edge, yet soft, thin, and pliable enough beneath its
+              toppings to be
+              folded in half to eat.
+            </p>
+            <button onclick="addSideOrderItem('New York-style pizza', '₱110.98')">₱110.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage right--animation" src="./img/Pizza-Image-Remove/pizza-margherita-removebg-preview.png"
+            alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Pizza Margherita</h1>
+            <p class="popular-paragraph">
+              Pizza Margherita is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh
+              basil, salt,
+              and extra-virgin olive oil.
+
+            </p>
+            <button onclick="addSideOrderItem('Pizza Margherita', '₱102.98')">₱102.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage left--animation " src="./img/Pizza-Image-Remove/Sicilian_pizza-removebg-preview.png"
+            alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Sicilian pizza</h1>
+            <p class="popular-paragraph">
+              Sicilian pizza is pizza prepared in a manner that originated in Sicily, Italy. Sicilian pizza is also
+              known as sfincione
+              or focaccia with toppings. This type of pizza became a popular dish in western Sicily by the mid-19th
+              century and was
+              the type of pizza usually consumed in Sicily until the 1860s.
+            </p>
+            <button onclick="addSideOrderItem('Sicilian pizza', '₱89.98')">₱89.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section_container">
+        <div class="popular show-scroll">
+          <img class="pizzaImage right--animation" src="./img/Pizza-Image-Remove/The-Greek-removebg-preview.png"
+            alt="Image Error"></img>
+
+          <div class="popular_description">
+            <h1>Greek pizza</h1>
+            <p class="popular-paragraph">
+              Greek pizza is a style of pizza crust and preparation where the pizza
+              is proofed
+              and cooked in a metal pan rather than stretched to order and baked on the floor of the pizza oven. A
+              shallow pan is
+              used, unlike the deep pans used in Sicilian, Chicago, or Detroit-styled pizzas.
+
+            </p>
+            <button onclick="addSideOrderItem('Greek pizza', '₱124.98')">₱124.98</button>
+            <button onclick="openSidebar()">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!--~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~-->
+  <footer class="footer" id="contactUs">
+    <div class="footer__container container grid">
+      <div>
+        <a href="./menu.html" class="footer__logo">
+          <img src="./images/logo.png" alt="logo image">
+          PizzaBan
+        </a>
+
+        <p class="footer__description">
+          Food for the body is not <br>
+          enough. There must be food <br>
+          for the soul.
+        </p>
+      </div>
+
+      <div class="footer__content">
+        <div>
+          <h3 class="footer__title">Main Menu</h3>
+
+          <ul class="footer__links">
+            <li><a href="./about.html" class="footer__link">About</a></li>
+            <li><a href="./menu.html" class="footer__link">Menus</a></li>
+            <li><a href="./pizza.html" class="footer__link">Offer</a></li>
+            <li><a href="./contact.html" class="footer__link">Events</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Information</h3>
+
+          <ul class="footer__links">
+            <li><a href="./contact.html" class="footer__link">Contact: 09551929404</a></li>
+            <li><a href="./pizza.html" class="footer__link">Order & Returns : 09460945946</a></li>
+            <li><a href="./final.html" class="footer__link">Videos</a></li>
+            <li><a href="./pizza.html" class="footer__link">Reservation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Address</h3>
+
+          <ul class="footer__links">
+            <li class="footer__information">
+              Sibonga <br>
+              Plaza</li>
+            <li class="footer__information">9AM - 11PM</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Social Media</h3>
+
+          <ul class="footer__links footer__social">
+            <a href="https://web.facebook.com/him.blacklion567" class="footer__social-link" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/nocodearea/" class="footer__social-link" target="_blank">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a href="https://twitter.com/JBringcola" class="footer__social-link" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>

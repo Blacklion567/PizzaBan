@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Titan+One&display=swap");
+
+:root {
+  --title-font: "Titan One", cursive;
+  --font-xl: 2rem;
+  --text-color-light: hsl(19, 8%, 55%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  background: url("../img/TypesOfPizza/pizzaBackground.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.container {
+  background-color: #0000008f;
+  padding: 5rem 4rem;
+  animation: container 0.8s ease-in-out alternate;
+}
+
+@keyframes container {
+  from {
+    transform: translate(0, -100%);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.logoName {
+  font-family: var(--title-font);
+  font-size: var(--font-xl);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fff7eb !important;
+  stroke-width: 2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #401c10;
+  stroke: #401c10;
+  text-shadow: 6px 6px 0px #9f7060;
+}
+
+#btn {
+  position: absolute;
+  width: 19rem;
+  height: 3rem;
+  color: hsl(36, 100%, 96%);
+  background-color: var(--text-color-light);
+  font-family: var(--title-font);
+  -webkit-text-stroke-color: #401c10;
+  stroke: #401c10;
+}
+
+#btn:focus {
+  outline: 0;
+  background-color: #4caf50;
+}
+
+#btn:active {
+  transform: scale(0.98);
+  background-color: #24ff2f;
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-control label {
+  position: absolute;
+  color: #fefefe;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1rem;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #fbaf34d8;
+  -webkit-text-stroke: 1px #fcaf34d8;
+  transform: translateY(-30px);
+}
