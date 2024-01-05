@@ -13,21 +13,21 @@
 
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./Style/contact.css">
+  <script src="./js/about.js" defer></script>
   <title>Contact Form</title>
 </head>
 
 <body>
-
   <header class="header" id="header">
     <nav class="nav container">
-      <a href="#header" class="nav__logo">
+      <a href="./final.php" class="nav__logo">
         <img src="./images/favicon.png" alt="logo image">
         PizzaBan
       </a>
 
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li class="nav__item"><a href="./final.html" class="nav__link active-link">Home</a></li>
+          <li class="nav__item"><a href="./final.php" class="nav__link active-link">Home</a></li>
           <li class="nav__item"><a href="./menu.html" class="nav__link">Menu</a></li>
           <li class="nav__item"><a href="./pizza.html" class="nav__link">Order</a></li>
           <li class="nav__item"><a href="./about.html" class="nav__link">About us</a></li>
@@ -36,8 +36,13 @@
 
       </div>
 
+      <div class="nav__buttons">
+        <i class="fa-regular fa-moon change-theme" id="theme-button"></i>
+
+      </div>
     </nav>
   </header>
+
 
   <div class="containers">
     <div class="column">
@@ -51,7 +56,7 @@
         <input type="email" id="email" name="email" placeholder="email@example.com" required>
 
         <label for="message" class="custom-label">Message:</label>
-        <textarea id="message" name="message" rows="4" placeholder="Enter Your Query Here"></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Enter Your Message Here"></textarea>
 
         <button type="submit">Submit</button>
       </form>
@@ -64,7 +69,7 @@
         <i class="fas fa-envelope icon"></i>
         <p><strong>Email:</strong> <a href="naviedaj567@gmail.com" style="color: #fff;">naviedaj567@gmail.com</a></p>
         <i class="fas fa-globe icon"></i>
-        <p><strong>Website:</strong> <a href="./final.html" target="_blank" style="color: #fff;">PizzaBan</a></p>
+        <p><strong>Website:</strong> <a href="./final.php" target="_blank" style="color: #fff;">PizzaBan</a></p>
         <p>Feel free to contact us for any inquiries or assistance.</p>
       </div>
     </div>

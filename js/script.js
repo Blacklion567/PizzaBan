@@ -179,7 +179,6 @@ function updateCart() {
 
 
 function displayValues() {
-
   const name = document.getElementById("name").value;
   const location = document.getElementById("location").value;
   const number = document.getElementById("number").value;

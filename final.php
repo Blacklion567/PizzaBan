@@ -5,11 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href=".">
-  <link rel="shortcut icon"
-    href="../Build-and-Deploy-a-Pizza-Website-Using-only-HTML-CSS-and-JavaScript-2023-Dark-and-Light//final//img/favicon.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="../Build-and-Deploy-a-Pizza-Website-Using-only-HTML-CSS-and-JavaScript-2023-Dark-and-Light//final//img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 
@@ -20,7 +17,14 @@
 </head>
 
 <body>
+  <?php
+  session_start();
 
+  if (!isset($_SESSION["user_id"])) {
+    header("Location: logIn.php");
+    exit();
+  }
+  ?>
 
   <header class="header" id="header">
     <nav class="nav container">
@@ -195,8 +199,7 @@
             Order Now <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-        <img src="./img/Pizza-Image/TheOriginalBBQChickenPizza_1200x630.0.jpg" alt="recently image"
-          class="recently__img">
+        <img src="./img/Pizza-Image/TheOriginalBBQChickenPizza_1200x630.0.jpg" alt="recently image" class="recently__img">
       </div>
     </section>
 
@@ -281,8 +284,7 @@
             <a href="https://web.facebook.com/him.blacklion567" class="footer__social-link" target="_blank">
               <i class="fa-brands fa-facebook"></i>
             </a>
-            <a href="https://www.instagram.com/nocodearea/                                                  "
-              class="footer__social-link" target="_blank">
+            <a href="https://www.instagram.com/nocodearea/                                                  " class="footer__social-link" target="_blank">
               <i class="fa-brands fa-square-instagram"></i>
             </a>
             <a href="https://twitter.com/JBringcola" class="footer__social-link" target="_blank">
